@@ -80,7 +80,7 @@
                                     <rect key="frame" x="226" y="312" width="64" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="addTaskButton:" destination="Vda-g8-k7s" eventType="touchUpInside" id="ypw-Wh-0hk"/>
+                                    <action selector="addTaskButtonPressed:" destination="Vda-g8-k7s" eventType="touchUpInside" id="ffL-Gg-gQe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLu-6b-R2q">
@@ -93,7 +93,7 @@
                                     <rect key="frame" x="115" y="312" width="48" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="cancelButton:" destination="Vda-g8-k7s" eventType="touchUpInside" id="yCI-CH-Hrw"/>
+                                    <action selector="cancelButtonPressed:" destination="Vda-g8-k7s" eventType="touchUpInside" id="ZXI-PF-MCV"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z5D-mb-VL1">
@@ -162,6 +162,7 @@
                         <viewControllerLayoutGuide type="bottom" id="GcJ-y2-Yea"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VCq-XK-pk6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ato-Zl-5eJ">
@@ -232,6 +233,7 @@
                         <viewControllerLayoutGuide type="bottom" id="caF-Gt-9C9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nCS-lh-HMD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vFZ-oO-0DP">

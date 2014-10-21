@@ -11,8 +11,6 @@
 
 @protocol AddTaskViewControllerDelegate <NSObject>
 
-@required
-
 -(void)didCancel;
 -(void)didAddTask:(TaskObject *)task;
 

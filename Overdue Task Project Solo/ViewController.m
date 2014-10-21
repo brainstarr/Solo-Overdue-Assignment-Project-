@@ -36,11 +36,23 @@
     
 }
 
+#pragma mark - navigation
+
 
 - (IBAction)addTaskButton:(UIBarButtonItem *)sender {
+    [self performSegueWithIdentifier:@"toAddTaskVC" sender:nil];
 }
 
 - (IBAction)reorderButton:(UIBarButtonItem *)sender {
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[AddTaskViewController class]])
+    {
+        AddTaskViewController *addTaskVC = segue.destinationViewController;
+        addTaskVC.delegate = self;
+    }
 }
 
 #pragma mark - AddTaskVC Delegate

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>78F59709-E578-45D3-A1BB-B70A0B1FC6A1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Overdue Task Project Solo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D38EC26D748D4966068121AC7CA814CA046E3004</key>
+		<string>https://github.com/brainstarr/Solo-Overdue-Assignment-Project-.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Overdue Task Project Solo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D38EC26D748D4966068121AC7CA814CA046E3004</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/brainstarr/Solo-Overdue-Assignment-Project-.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D38EC26D748D4966068121AC7CA814CA046E3004</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D38EC26D748D4966068121AC7CA814CA046E3004</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Overdue%20Task%20Project%20Solo</string>
+		</dict>
+	</array>
+</dict>
+</plist>
