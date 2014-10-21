@@ -36,11 +36,25 @@
 
 - (IBAction)addTaskButtonPressed:(UIButton *)sender
 {
-    
+    [self.delegate didAddTask:[self returnTaskObject]];
 }
 
 - (IBAction)cancelButtonPressed:(UIButton *)sender
 {
-    
+    [self.delegate didCancel];
 }
+
+#pragma mark - Helper Methods
+
+-(TaskObject *)returnTaskObject
+{
+    TaskObject *task = [[TaskObject alloc]init];
+    task.taskName = self.nameTextField.text;
+    task.taskDescription = self.detailsTextView.text;
+    task.taskDate = self.datePicker.date;
+    task.status = NO;
+    
+    return task;
+}
+
 @end

@@ -49,6 +49,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="aUD-bB-JkZ" id="xct-Lb-S8v"/>
                         <segue destination="Vda-g8-k7s" kind="presentation" identifier="toAddTaskVC" id="cYX-2M-jJy"/>
                         <segue destination="XEe-XS-2lt" kind="show" identifier="toDetailVC" id="53I-sX-IrW"/>
                     </connections>
