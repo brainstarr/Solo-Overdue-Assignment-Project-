@@ -7,13 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TaskObject.h"
+
+@protocol AddTaskViewControllerDelegate <NSObject>
+
+@required
+
+-(void)didCancel;
+-(void)didAddTask:(TaskObject *)task;
+
+@end
 
 @interface AddTaskViewController : UIViewController
+
+@property (weak, nonatomic) id <AddTaskViewControllerDelegate> delegate;
+
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;
 @property (strong, nonatomic) IBOutlet UITextView *detailsTextView;
 
-- (IBAction)addTaskButton:(UIButton *)sender;
-- (IBAction)cancelButton:(UIButton *)sender;
+- (IBAction)addTaskButtonPressed:(UIButton *)sender;
+- (IBAction)cancelButtonPressed:(UIButton *)sender;
 
 @property (strong, nonatomic) IBOutlet UIDatePicker *datePicker;
 

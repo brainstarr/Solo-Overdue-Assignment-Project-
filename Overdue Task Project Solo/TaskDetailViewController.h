@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddTaskViewController.h"
 
-@interface TaskDetailViewController : UIViewController
+@interface TaskDetailViewController : UIViewController;
+
 @property (strong, nonatomic) IBOutlet UILabel *taskName;
 @property (strong, nonatomic) IBOutlet UILabel *taskDescription;
 @property (strong, nonatomic) IBOutlet UILabel *taskDate;

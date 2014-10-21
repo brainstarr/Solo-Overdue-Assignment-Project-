@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddTaskViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <AddTaskViewControllerDelegate>
 
 - (IBAction)addTaskButton:(UIBarButtonItem *)sender;
 - (IBAction)reorderButton:(UIBarButtonItem *)sender;
-
-
 
 @end
 
