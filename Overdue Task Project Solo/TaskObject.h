@@ -13,6 +13,8 @@
 @property (strong, nonatomic) NSString *taskName;
 @property (strong, nonatomic) NSString *taskDescription;
 @property (strong, nonatomic) NSDate *taskDate;
-@property (nonatomic) BOOL *status;
+@property (nonatomic) BOOL status;
+
+- (id)initWithData:(NSDictionary *)data;
 
 @end

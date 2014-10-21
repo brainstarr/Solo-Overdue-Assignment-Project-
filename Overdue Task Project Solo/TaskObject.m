@@ -10,4 +10,25 @@
 
 @implementation TaskObject
 
+- (id)initWithData:(NSDictionary *)data
+{
+    self = [super init];
+    
+    if (self){
+        self.taskName = data[TASK_NAME];
+        self.taskDescription = data[TASK_DESCRIPTION];
+        self.taskDate = data[TASK_DATE];
+        self.status = [data[COMPLETION] boolValue];
+    }
+    
+    return self;
+}
+
+- (id)init
+{
+    self = [self initWithData:nil];
+    
+    return self;
+}
+
 @end
