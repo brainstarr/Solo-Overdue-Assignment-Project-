@@ -19,6 +19,15 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aUD-bB-JkZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="bE9-5P-a7D">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bE9-5P-a7D" id="4BX-FH-e4Q">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                                 </variation>
@@ -77,7 +86,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="226" y="312" width="64" height="30"/>
+                                    <rect key="frame" x="224" y="166" width="64" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="addTaskButtonPressed:" destination="Vda-g8-k7s" eventType="touchUpInside" id="ffL-Gg-gQe"/>
@@ -90,7 +99,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="115" y="312" width="48" height="30"/>
+                                    <rect key="frame" x="113" y="166" width="48" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="cancelButtonPressed:" destination="Vda-g8-k7s" eventType="touchUpInside" id="ZXI-PF-MCV"/>
@@ -104,13 +113,13 @@
                                     <rect key="frame" x="93" y="28" width="215" height="30"/>
                                 </variation>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter Task Details" translatesAutoresizingMaskIntoConstraints="NO" id="G4O-5A-KDa">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4O-5A-KDa">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.94741611479999999" blue="0.68101887709999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="66" width="368" height="218"/>
+                                    <rect key="frame" x="16" y="66" width="368" height="92"/>
                                 </variation>
                             </textView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="isK-4T-cch">
@@ -119,7 +128,7 @@
                                     <!--2014-10-20 20:27:14 +0000-->
                                 </date>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="377" width="400" height="162"/>
+                                    <rect key="frame" x="0.0" y="204" width="400" height="162"/>
                                 </variation>
                             </datePicker>
                         </subviews>

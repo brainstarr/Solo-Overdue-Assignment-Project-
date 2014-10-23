@@ -14,20 +14,22 @@
 
 @implementation ViewController
 
--(NSMutableArray *)tasks
-{
-    if (!_tasks){
-        _tasks = [[NSMutableArray alloc] init];
-    }
-    
-    return _tasks;
-}
-
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    NSArray *tasksAsPropertyLists = [[NSUserDefaults standardUserDefaults]arrayForKey:TASK_OBJECTS_KEY];
+    
+    for (NSDictionary *dictionary in tasksAsPropertyLists)
+    {
+        TaskObject *task = [self taskObjectForDictionary:dictionary];
+        [self.tasks addObject:task];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,6 +86,22 @@
     NSDictionary *dictionary = @{TASK_NAME : taskobject.taskName , TASK_DESCRIPTION : taskobject.description , TASK_DATE : taskobject.taskDate , COMPLETION : @(taskobject.status)};
     
     return dictionary;
+}
+
+-(NSMutableArray *)tasks
+{
+    if (!_tasks){
+        _tasks = [[NSMutableArray alloc] init];
+    }
+    
+    return _tasks;
+}
+
+-(TaskObject *)taskObjectForDictionary:(NSDictionary *)dictionary
+{
+    TaskObject *task = [[TaskObject alloc]initWithData:dictionary];
+    
+    return task;
 }
 
 #pragma Datasource
