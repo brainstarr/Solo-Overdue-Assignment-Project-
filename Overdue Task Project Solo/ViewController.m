@@ -86,4 +86,32 @@
     return dictionary;
 }
 
+#pragma Datasource
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.tasks count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    TaskObject *task = self.tasks[indexPath.row];
+    cell.textLabel.text = task.taskName;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateStyle:@"MM-DD-YY"];
+    NSString *stringFromDate = [formatter stringFromDate:task.taskDate];
+    cell.detailTextLabel.text = stringFromDate;
+    
+    return cell;
+}
+
 @end
