@@ -104,6 +104,15 @@
     return task;
 }
 
+- (BOOL)isDateGreaterThanDate:(NSDate*)date and:(NSDate*)toDate
+{
+    NSTimeInterval firstinterval = [date timeIntervalSince1970];
+    NSTimeInterval secondInterval = [toDate timeIntervalSince1970];
+    
+    if (firstinterval > secondInterval) return YES;
+    else return NO;
+}
+
 #pragma Datasource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -128,6 +137,12 @@
     [formatter setDateStyle:@"MM-DD-YY"];
     NSString *stringFromDate = [formatter stringFromDate:task.taskDate];
     cell.detailTextLabel.text = stringFromDate;
+    
+    BOOL isOverdue = [self isDateGreaterThanDate:[NSDate date] and:task.taskDate];
+    
+    if (isOverdue == YES) cell.backgroundColor = [UIColor redColor];
+    else cell.backgroundColor = [UIColor yellowColor];
+    
     
     return cell;
 }
