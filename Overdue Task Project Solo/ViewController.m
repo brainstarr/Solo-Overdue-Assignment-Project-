@@ -113,6 +113,24 @@
     else return NO;
 }
 
+-(void)updateCompletionOfTask:(TaskObject *)task forIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSMutableArray *updatedTaskObjects = [[[NSUserDefaults standardUserDefaults]arrayForKey:TASK_OBJECTS_KEY]mutableCopy];
+    if (!updatedTaskObjects) updatedTaskObjects = [[NSMutableArray alloc]init];
+    
+    [updatedTaskObjects removeObjectAtIndex:indexPath.row];
+    
+    if (task.status == NO) task.status = YES;
+    else task.status = NO;
+    [updatedTaskObjects insertObject:[self taskObjectAsPropertyList:task] atIndex:indexPath.row];
+    
+    [[NSUserDefaults standardUserDefaults]setObject:updatedTaskObjects forKey:TASK_OBJECTS_KEY];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    [self.tableView reloadData];
+    
+}
+
 #pragma Datasource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -140,11 +158,18 @@
     
     BOOL isOverdue = [self isDateGreaterThanDate:[NSDate date] and:task.taskDate];
     
-    if (isOverdue == YES) cell.backgroundColor = [UIColor redColor];
+    if (task.status == YES) cell.backgroundColor = [UIColor greenColor];
+    else if (isOverdue == YES) cell.backgroundColor = [UIColor redColor];
     else cell.backgroundColor = [UIColor yellowColor];
     
-    
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TaskObject *taskToBeUpdated = self.tasks[indexPath.row];
+    
+    [self updateCompletionOfTask:taskToBeUpdated forIndexPath:indexPath];
 }
 
 @end
